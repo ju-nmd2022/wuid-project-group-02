@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navigation.css" />
+    <script src="navigation.js"></script>
+    <title>Navigation</title>
+  </head>
+  <body>
+    <nav>
+      <!-- menu button -->
+      <div>
+        <button class="btn-menu-icon" onclick="showCategory()">
+          <img src="menu_icon.png" class="menu_icon icon" />
+        </button>
+      </div>
+      <!-- logo -->
+      <div class="logo">
+        <img src="omnia.png" class="nav_logo" />
+      </div>
+      <!-- list -->
+      <ul class="nav_icons">
+        <!-- searchbar -->
+        <li>
+          <img src="search.png" class="search_icon icon" />
+        </li>
+        <li class="searchbox">
+          <input
+            class="searchbar"
+            type="text"
+            placeholder="quirky search text"
+          />
+        </li>
+        <!-- profile button -->
+        <li class="profile">
+          <button class="btn-profile-icon">
+            <img src="smile_icon4.png" class="profile_icon icon" />
+          </button>
+        </li>
+        <!-- heart button -->
+        <li>
+          <button class="btn-heart-icon">
+            <img src="heart.png" class="heart-icon icon" />
+          </button>
+        </li>
+        <!-- cart button -->
+        <li>
+          <button class="btn-cart-icon" onclick="showCart()">
+            <img src="bag.png" class="cart-icon icon" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <content>
+      <div id="category-slideIn" class="category-slideIn">
+        <ul class="list-category">
+          <li class="list-headline">WOMEN</li>
+          <li>tops</li>
+          <li>bottoms</li>
+          <li>dresses</li>
+          <li>shoes</li>
+          <li>accessories</li>
+          <li class="list-whitespace">"blank"</li>
+          <li class="list-headline">MEN</li>
+          <li>tops</li>
+          <li>bottoms</li>
+          <li>suits</li>
+          <li>shoes</li>
+          <li>accessories</li>
+          <li class="list-whitespace">"blank"</li>
+          <li class="list-whitespace">"blank"</li>
+          <li>FALL COLLECTION</li>
+          <li class="list-whitespace">"blank"</li>
+          <li>NEWEST COLLECTION</li>
+          <li class="list-whitespace">"blank"</li>
+          <li>DISCOUNTS</li>
+        </ul>
+      </div>
+
+      <div id="cart-slideIn" class="cart-slideIn">
+        <container class="list-cart">
+          <p class="list-headline cart-underline">CART</p>
+        </container>
+        <div class="checkout-area">
+          <button class="checkout-button">CHECKOUT</button>
+        </div>
+      </div>
+    </content>
+  </body>
+</html>

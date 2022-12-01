@@ -1,0 +1,64 @@
+body{
+    margin: 0%;
+}
+
+.footersquare{
+    margin-top: 150px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+ h1{
+    font-size:large;
+    font-weight: bolder;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:start;
+    color: white;
+}
+
+li{
+    font-size:medium;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+
+li:hover{
+    text-decoration: underline;
+
+}
+
+ul{
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+
+
+.content{
+    background-color: rgb(234, 211, 175);
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 2rem 6rem;
+}
+
+img{
+    height: 50px;
+}
+
+.payments{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    column-gap: 1px;
+
+}
+
+
