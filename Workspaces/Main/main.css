@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 80px 80vh 80px;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "content"
+  "footer";
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(0, 118, 0);
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(0, 77, 0);
+}
+
+content {
+  grid-area: content;
+  background-color: rgb(0, 158, 0);
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(0, 193, 0);
+}
