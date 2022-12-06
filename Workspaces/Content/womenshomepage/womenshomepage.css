@@ -1,19 +1,22 @@
-body{
-    margin: 0;
-}
+
 
 body, html{
     height: 100%;
     display: flex;
     justify-content: center;
 }
-
+content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
 .landingpageimg img {
     background-image: url("landingpageimg.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+    
 
 }
 
@@ -32,6 +35,35 @@ body, html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35px 80px 1fr 80px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "content"
+    "footer";
+  }
+  
+  header {
+    grid-area: header;
+    background-color: rgb(0, 118, 0);
+  }
+  nav {
+    grid-area: nav;
+    background-color: rgb(0, 77, 0);
+  }
+  
+  content {
+    grid-area: content;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: rgb(0, 193, 0);
+  }
 
 
 

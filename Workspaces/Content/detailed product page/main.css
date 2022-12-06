@@ -1,0 +1,149 @@
+/* the following overflow code is from source and has been adapted https://stackoverflow.com/questions/7646538/disable-vertical-scroll-bar-on-div-overflow-auto */
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 80px 1fr 80px;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "content"
+  "footer";
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(0, 118, 0);
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(0, 77, 0);
+}
+
+content {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(0, 193, 0);
+  z-index: 1;
+}
+
+h2, h3{
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.productimage{
+  height: 100vh;
+    bottom: 0px;
+    width: 50vw;
+    object-fit: cover;
+}
+
+.item-container {
+    display:flex;
+    flex-direction: row;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  width: 50vw;
+  margin-top: 100px;
+}
+
+.item-price{
+    border-bottom: 2px solid black;
+    width: 170px;
+    margin-right: 0;
+    font-size: 1rem;
+}
+
+/* the following transform code is from source and has been adapted https://stackoverflow.com/questions/22754040/text-rotation-with-google-chrome-using-css */
+
+#vertical-item-name{
+  position:absolute;
+  bottom: 16%;
+  right:80px;
+  height: 40px;
+  line-height: 40px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  color: lightgrey;
+  font-size: 60px;
+  font-weight: normal;
+  transform-origin: 100% 0;
+}
+
+
+
+/* https://www.w3schools.com/css/css_dropdowns.asp */
+
+.sizes-title {
+    position: relative;
+    display: inline-block;
+    border-bottom: 2px solid black;
+    width: 170px;
+    cursor: pointer;
+  }
+
+  .heart, .arrow-down{
+    height: 20px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 170px;
+    border: solid #dedede;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    /* z-index: 1; */
+  }
+  
+  .dropdown-content p {
+    color: black;
+    font-weight: normal;
+    padding: 12px 16px;
+    margin: 0px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content p:hover { 
+    background-color: #dedede;
+    cursor: pointer;
+}
+  
+  .sizes-title:hover .dropdown-content { 
+    display: block;
+  }
+
+  .arrow-down:hover{ 
+    animation-name: dropdown-arrow;
+    animation-duration: infinite;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform: rotate(180deg);
+    transition: 0.7s;
+
+  }
+
+  
+
