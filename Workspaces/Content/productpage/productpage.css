@@ -372,14 +372,77 @@ content {
 }
 /* color of circles */
 .circle-1 {
-  background-color: #6F5E53;
+  background-color: #decfc5;
 }
 .circle-2 {
-  background-color: #FC9E4F;
+  background-color: #3c3630;
 }
 .circle-3 {
-  background-color: #FF521B;
+  background-color: #000000;
 }
+.circle-4 {
+  background-color: #000000;
+}
+.circle-5 {
+  background-color: #dbb6b6;
+}
+.circle-6 {
+  background-color: #a6ac8c;
+}
+.circle-7 {
+  background-color: #bda186;
+}
+.circle-8 {
+  background-color: #534130;
+}
+.circle-9 {
+  background-color: #120c05;
+}
+.circle-10 {
+  background-color: #a2c0ca;
+}
+.circle-11 {
+  background-color: #8dcb9a;
+}
+.circle-12 {
+  background-color: #dea4cf;
+}
+.circle-13 {
+  background-color: #e2d9d0;
+}
+.circle-14 {
+  background-color: #84817e;
+}
+.circle-15 {
+  background-color: #bd8695;
+}
+.circle-16 {
+  background-color: #a48d88;
+}
+.circle-17 {
+  background-color: #000000;
+}
+.circle-18 {
+  background-color: #48423c;
+}
+.circle-19 {
+  background-color: #efeeed;
+}
+.circle-20 {
+  background-color: #d39e9e;
+}
+.circle-21 {
+  background-color: #717171;
+}
+
+
+
+
+
+
+
+
+
 
 
 /* directing product cards to pre-defined grid areas */
