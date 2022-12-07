@@ -1,4 +1,5 @@
 * {
+  /* https://www.w3schools.com/css/css_font_google.asp */
   font-family: "Inter", sans-serif 
 }
 body {
@@ -339,6 +340,40 @@ label {
   background-color: rgb(212, 184, 142);
   cursor: pointer;
 }
+
+.item-card {
+  grid-area: item1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "image name price"
+  "image remove amount";
+}
+
+.item-image-area {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+
+}
+.item-image {
+  height: 100%;
+}
+.item-name-size-area {
+  grid-area: name;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
   grid-area: footer;
