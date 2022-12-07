@@ -63,7 +63,7 @@ p{
     flex-direction: row;
 }
 
-.item-text{
+.item-textbox{
   display: flex;
   flex-direction: column;
   padding-left: 50px;
@@ -78,7 +78,122 @@ p{
     font-size: 1rem;
 }
 
+/* size dropdown menu */
+
+.sizes-title {
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px solid black;
+  width: 170px;
+  cursor: pointer;
+}
+
+.sizes-title:hover .arrow-down{
+  animation-name: dropdown-arrow;
+  animation-duration: infinite;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform: rotate(180deg);
+  transition: 0.7s;
+
+}
+
+
+/* the following dropdown menu is from source and has been adapted https://www.w3schools.com/css/css_dropdowns.asp */
+
+
+.sizes-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 170px;
+  border: solid #dedede;
+}
+
+.sizes-dropdown p {
+  color: black;
+  font-weight: normal;
+  padding: 12px 16px;
+  margin: 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.sizes-dropdown p:hover { 
+  background-color: #dedede;
+  cursor: pointer;
+}
+
+.sizes-title:hover .sizes-dropdown { 
+  display: block;
+}
+
+/* material and care dropdown menu */
+
+
+.material-title{
+  border-bottom: 2px solid black;
+  width: 170px;
+  margin-right: 0;
+  margin-top: 90px;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.material-title:hover .arrow-down{
+animation-name: dropdown-arrow;
+animation-duration: infinite;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+transform: rotate(180deg);
+transition: 0.7s;
+}
+
+
+  .material-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 170px;
+
+  }
+  
+  .material-dropdown p {
+    color: black;
+    font-weight: normal;
+    margin: 0px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+.material-title:hover .material-dropdown { 
+  display: block;
+}
+
+/* heart and arrow down icons */
+
+.heart, .arrow-down{
+  height: 20px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.arrow-down:hover{ 
+  animation-name: dropdown-arrow;
+  animation-duration: infinite;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform: rotate(180deg);
+  transition: 0.7s;
+
+  }
+
+
 /* the following transform code is from source and has been adapted https://stackoverflow.com/questions/22754040/text-rotation-with-google-chrome-using-css */
+
+/* vertial aquadora */
 
 #vertical-item-name{
   position:absolute;
@@ -94,118 +209,26 @@ p{
   transform-origin: 100% 0;
 }
 
-.item-material{
-  border-bottom: 2px solid black;
-  width: 170px;
-  margin-right: 0;
-  margin-top: 90px;
-  font-size: 1rem;
-}
+/* add to cart button */
 
-/* https://www.w3schools.com/css/css_dropdowns.asp */
-
-/* size title and dropdown menu */
-
-.sizes-title {
-    position: relative;
-    display: inline-block;
-    border-bottom: 2px solid black;
-    width: 170px;
-    cursor: pointer;
-  }
-
-  .heart, .arrow-down{
-    height: 20px;
-    cursor: pointer;
-    transition: 0.7s;
-}
+.checkout-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: Verdana, Tahoma, sans-serif;
+  padding: 1rem 4rem;
+  background-color: #E5C89B;
+  border-radius: 0;
+  margin-top: 100px;
+  margin-left: 200px;
+  border: 0;
   
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    width: 170px;
-    border: solid #dedede;
-  }
-  
-  .dropdown-content p {
-    color: black;
-    font-weight: normal;
-    padding: 12px 16px;
-    margin: 0px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content p:hover { 
-    background-color: #dedede;
-    cursor: pointer;
-}
-  
-  .sizes-title:hover .dropdown-content { 
-    display: block;
+    /* https://stackoverflow.com/questions/16644726/css-making-a-buttons-background-color-two-different-solid-colors-not-gradient */
+  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgb(255,255,255) 51%);
   }
 
-/* material and care dropdown menu */
-
-  .dropdown-material {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    width: 170px;
+  .checkout-button:hover {
+    background-color: rgb(212, 184, 142);
   }
-  
-  .dropdown-material p {
-    color: black;
-    font-weight: normal;
-    margin: 0px;
-    text-decoration: none;
-    display: block;
-  }
-  
-
-.item-material:hover .dropdown-material { 
-  display: block;
-}
-
-
-  .arrow-down:hover{ 
-    animation-name: dropdown-arrow;
-    animation-duration: infinite;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    transform: rotate(180deg);
-    transition: 0.7s;
-
-  }
-  .item-material:hover .dropdown-material { 
-    display: block;
-  }
-
-  .item-material{
-    border-bottom: 2px solid black;
-    width: 170px;
-    margin-right: 0;
-    margin-top: 90px;
-    font-size: 1rem;
-  }
-  
-  .dropdown-material {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    width: 170px;
-  }
-  
-  .dropdown-material p {
-    color: black;
-    font-weight: normal;
-    margin: 0px;
-    text-decoration: none;
-    display: block;
-  }
-
-
-  /* ___________________________________________________ */
-
  
