@@ -12,7 +12,52 @@
   </head>
   <body>
     <header></header>
-    <nav>nav.components</nav>
+    <!-- navigation area -->
+    <nav>
+      <!-- menu button -->
+      <div class="menu-area">
+        <button class="btn-menu-icon searchbar-button" onclick="showCategory()">
+          <img src="../../images/menu_icon.png" class="menu_icon icon" />
+        </button>
+      </div>
+      <!-- logo -->
+      <div class="logo-area">
+        <img src="../../images/omnia.png" class="logo" />
+      </div>
+      <!-- list -->
+      <ul class="list-area">
+        <!-- searchbar -->
+        <li>
+          <img src="../../images/search.png" class="search_icon icon" />
+        </li>
+        <li class="searchbox">
+          <input
+            class="searchbar"
+            type="text"
+            placeholder="quirky search text"
+          />
+        </li>
+        <!-- profile button -->
+        <li class="profile">
+          <button class="btn-profile-icon searchbar-button"  >
+            <img src="../../images/smile_icon4.png" class="profile_icon icon" />
+          </button>
+        </li>
+        <!-- heart button -->
+        <li>
+          <button class="btn-heart-icon searchbar-button" >
+            <img src="../../images/heart.png" class="heart-icon icon" />
+          </button>
+        </li>
+        <!-- cart button -->
+        <li>
+          <button class="btn-cart-icon searchbar-button" onclick="showCart()">
+            <img src="../../images/bag.png" class="cart-icon icon" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- content area -->
     <content>
       <div class="image-field">
         <img
@@ -165,7 +210,7 @@
               <!-- input-text-card2 -->
               <p class="input-text" id="input-text-card2"></p>
             </div>
-        </section>
+          </section>
       </container>
       <!-- divider -->
       <div class="divider-field">
