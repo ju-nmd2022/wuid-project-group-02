@@ -144,6 +144,34 @@ p{
     transition: 0.7s;
 
   }
+  .item-material:hover .dropdown-material { 
+    display: block;
+  }
 
+  .item-material{
+    border-bottom: 2px solid black;
+    width: 170px;
+    margin-right: 0;
+    margin-top: 90px;
+    font-size: 1rem;
+  }
   
+  .dropdown-material {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 170px;
+  }
+  
+  .dropdown-material p {
+    color: black;
+    font-weight: normal;
+    margin: 0px;
+    text-decoration: none;
+    display: block;
+  }
 
+
+  /* ___________________________________________________ */
+
+ 
