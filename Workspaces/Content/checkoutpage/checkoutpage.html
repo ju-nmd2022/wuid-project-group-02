@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="checkoutpage.css" />
+    <script src="checkoutpage.js" defer></script>
+    <title>checkoutpage</title>
+  </head>
+  <body>
+    <header></header>
+    <nav>nav.components</nav>
+    <content>
+      <div class="image-field">
+        <img
+          src="../landingpage/men_fashion.jpg"
+          alt="alttext"
+          class="checkout-image"
+        />
+      </div>
+      <container class="checkout-field">
+        <section class="checkout-step-area">
+          <div class="customer-information checkout-step">
+            <p class="customer-info-headline checkout-headline">
+              Customer information
+            </p>
+            <!-- input field - customer information -->
+            <div class="customer-info-area">
+              <div class="firstname-card">
+                <label>first name</label>
+                <input type="text" class="input" />
+              </div>
+              <div class="lastname-card">
+                <label>last name</label>
+                <input type="text" class="input" />
+              </div>
+              <div class="email-card">
+                <label>email adress</label>
+                <input type="text" class="input" />
+              </div>
+              <div class="number-card">
+                <label>mobile phone number</label>
+                <input type="text" class="fullnumber input" />
+              </div>
+              <div class="confirm-email-card">
+                <label>confirm email adress</label>
+                <input type="text" class="input" />
+              </div>
+            </div>
+            <button class="continue-button">Continue</button>
+          </div>
+          <!-- div -->
+          <div class="customer-inputed-info">
+            <div class="input-area">
+              <p class="input-text" id="input-text"></p>
+              <button class="edit-button">edit</button>
+            </div>
+            <div>
+              <p class="input-text" id="input-number"></p>
+            </div>
+          </div>
+          <!-- shipping area -->
+          <div class="customer-information checkout-step">
+            <p class="customer-info-headline checkout-headline">
+              Shipping adress
+            </p>
+            <!-- input field - customer information -->
+            <div class="shipping-adress-area">
+              <div class="adress1-card">
+                <label>adress 1</label>
+                <input type="text" class="input" />
+              </div>
+              <div class="adress2-card">
+                <label>adress 2</label>
+                <input type="text" class="input" />
+              </div>
+              <div class="city-card">
+                <label>city</label>
+                <input type="text" class="input" />
+              </div>
+              <div class="zipcode-card">
+                <label>zip code</label>
+                <input type="text" class="input" />
+              </div>
+              <div class="country-card">
+                <label>country</label>
+                <input type="text" class="input" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </container>
+      <div class="divider-field">
+        <div class="divider"></div>
+      </div>
+      <div class="cart-field">Cart</div>
+    </content>
+    <footer></footer>
+  </body>
+</html>
