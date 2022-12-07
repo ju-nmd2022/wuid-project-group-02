@@ -6,7 +6,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 35px 80px 100% 80px;
+  grid-template-rows: 35px 80px 100vh 80px;
   grid-template-areas: 
   "header"
   "nav"
@@ -28,9 +28,8 @@ content {
   background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr 1.7fr 0.5rem 1.2fr;
-  grid-template-rows: 2rem 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas: 
-  ". . . ."
   "imagefield checkoutfield divider cartfield";
 }
 
@@ -302,8 +301,8 @@ label {
   grid-template-rows: 80px 150px 150px 150px 150px 125px;
   grid-template-areas: 
   "headline"
-  "."
   "item1"
+  "."
   "."
   "."
   "check-button";
@@ -349,6 +348,11 @@ label {
   grid-template-areas: 
   "image name price"
   "image remove amount";
+  padding: 1rem 0;
+  border-bottom:  rgb(224, 224, 224) 1px solid;
+  border-top: rgb(224, 224, 224) 1px solid;
+
+  
 }
 
 .item-image-area {
@@ -362,9 +366,43 @@ label {
 }
 .item-name-size-area {
   grid-area: name;
+  padding-top: 0.5rem;
 }
 
-
+.item-price-area {
+  grid-area: price;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 2.5rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.item-remove-area {
+  grid-area: remove;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
+}
+.remove-button {
+  text-decoration: underline;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color: rgb(205, 205, 205);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0;
+}
+.remove-button:hover {
+  cursor: pointer;
+  color: grey;
+  transition: 0.5s ease;
+}
+.item-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
 
 
 
