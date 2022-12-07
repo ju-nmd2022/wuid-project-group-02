@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="checkoutpage.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
     <script src="checkoutpage.js" defer></script>
     <title>checkoutpage</title>
   </head>
@@ -20,81 +22,160 @@
         />
       </div>
       <container class="checkout-field">
+        <div class="billing-adress-headline document-headline">Billing adress</div>
         <section class="checkout-step-area">
           <div class="customer-information checkout-step">
-            <p class="customer-info-headline checkout-headline">
+            <p class="checkout-headline">
               Customer information
             </p>
             <!-- input field - customer information -->
-            <div class="customer-info-area">
+            <div id="customer-info-area" class="customer-info-area">
               <div class="firstname-card">
                 <label>first name</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="first name" />
               </div>
               <div class="lastname-card">
                 <label>last name</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="last name"/>
               </div>
               <div class="email-card">
                 <label>email adress</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="email adress"/>
               </div>
               <div class="number-card">
                 <label>mobile phone number</label>
-                <input type="text" class="fullnumber input" />
+                <input type="text" class="fullnumber input" placeholder="mobile phone number"/>
               </div>
               <div class="confirm-email-card">
                 <label>confirm email adress</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="confirm email adress"/>
               </div>
+              <!-- button -->
+              <button class="continue-button1 con-button">Continue</button>
             </div>
-            <button class="continue-button">Continue</button>
           </div>
           <!-- div -->
-          <div class="customer-inputed-info">
+          <div class="customer-inputed-info" id="customer-inputed-info">
             <div class="input-area">
               <p class="input-text" id="input-text"></p>
-              <button class="edit-button">edit</button>
+              <button class="edit-button edit-btn">edit</button>
             </div>
             <div>
               <p class="input-text" id="input-number"></p>
             </div>
           </div>
+
+
+
+
           <!-- shipping area -->
-          <div class="customer-information checkout-step">
-            <p class="customer-info-headline checkout-headline">
+          <div class="customer-information">
+            <p class="checkout-headline">
               Shipping adress
             </p>
             <!-- input field - customer information -->
-            <div class="shipping-adress-area">
+            <div class="shipping-adress-area" id="shipping-adress-area">
+              <!-- adress1 object -->
               <div class="adress1-card">
                 <label>adress 1</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="adress1"/>
               </div>
+              <!-- adress2 object -->
               <div class="adress2-card">
                 <label>adress 2</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="adress2"/>
               </div>
+              <!-- city object -->
               <div class="city-card">
                 <label>city</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="city" />
               </div>
+              <!-- zipcode object -->
               <div class="zipcode-card">
                 <label>zip code</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="zip code"/>
               </div>
+              <!-- country object -->
               <div class="country-card">
                 <label>country</label>
-                <input type="text" class="input" />
+                <input type="text" class="input" placeholder="country"/>
               </div>
+              <!-- button -->
+              <button class="continue-button2 con-button">Continue</button>
             </div>
           </div>
+          <div class="shipping-inputed-info" id="shipping-inputed-info">
+            <!-- input-area -->
+            <div class="input-area">
+              <!-- input-text-shipping -->
+              <p class="input-text" id="input-text-shipping"></p>
+              <button class="edit-button2 edit-btn">edit</button>
+            </div>
+            <div>
+              <!-- input-text-shipping2 -->
+              <p class="input-text" id="input-text-shipping2"></p>
+            </div>
+          </div>
+            
+            <!-- card area -->
+          <div class="customer-information checkout-step">
+            <p class="checkout-headline">
+              Card
+            </p>
+            <!-- input field - customer information -->
+            <div class="card-adress-area" id="card-adress-area">
+              <!-- adress1 object -->
+              <div class="cardholder-card">
+                <label>card holder</label>
+                <input type="text" class="input" placeholder="card holder"/>
+              </div>
+              <!-- adress2 object -->
+              <div class="cardnumber-card">
+                <label>card number</label>
+                <input type="text" class="input" placeholder="xxxx xxxx xxxx xxxx"/>
+              </div>
+              <!-- city object -->
+              <div class="exmonth-card">
+                <label>expiration month</label>
+                <input type="text" class="input" placeholder="xx"/>
+              </div>
+              <!-- zipcode object -->
+              <div class="exyear-card">
+                <label>expiration year</label>
+                <input type="text" class="input" placeholder="xx" />
+              </div>
+              <!-- cvv object -->
+              <div class="cvv-card">
+                <label>cvv</label>
+                <input type="text" class="input" placeholder="xxx"/>
+              </div>
+              <!-- con-button -->
+              <button class="continue-button3 con-button">Continue</button>
+            </div>
+          </div>
+          <div class="card-inputed-info" id="card-inputed-info">
+            <!-- input-area -->
+            <div class="input-area">
+              <!-- input-text-card -->
+              <p class="input-text" id="input-text-card"></p>
+              <!-- editbutton -->
+              <button class="edit-button3 edit-btn">edit</button>
+            </div>
+            <div>
+              <!-- input-text-card2 -->
+              <p class="input-text" id="input-text-card2"></p>
+            </div>
         </section>
       </container>
       <div class="divider-field">
         <div class="divider"></div>
       </div>
-      <div class="cart-field">Cart</div>
+      <div class="cart-field">
+        <div class="cart-headline document-headline">Cart</div>
+        <div class="checkout-area">
+         <button class="checkout-button">COMPLETE ORDER</button>
+        </div>
+      </div>
     </content>
     <footer></footer>
   </body>

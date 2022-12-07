@@ -1,11 +1,11 @@
 * {
-  font-family: verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Inter", sans-serif 
 }
 body {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 35px 80px 88vh 80px;
+  grid-template-rows: 35px 80px 100% 80px;
   grid-template-areas: 
   "header"
   "nav"
@@ -47,19 +47,33 @@ content {
   grid-area: checkoutfield;
   display: grid;
   grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 0.3fr 1fr;
+  grid-template-rows: 80px 0.2fr 1fr;
   grid-template-areas: 
+  "headline headline headline"
   ". . ."
   ". checkout .";
 }
+/* general apperance of headlines Billing Adress & CART */
+.document-headline {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+}
 
+.billing-adress-headline {
+  grid-area: headline;
+}
+
+/* dedicated space to the grid */
 .checkout-step-area {
   grid-area: checkout;
 }
-.customer-infoformation {
+/* simple position of box (optional) */
+.customer-information {
   position: relative;
 }
 
+/* Headline for each step */
 .checkout-headline {
   font-size: 1rem;
   font-weight: 550;
@@ -67,23 +81,15 @@ content {
   margin-top: 1.5rem;
 }
 
-.customer-info-area {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "first last"
-  "email mobilePhoneNumber"
-  "confirmEmail .";
-  grid-gap: 0.5rem;
-  position: relative;
 
-}
 
+/* name above the input element */
 label {
   display: block;
   width: 100%;
 }
+
+/* general apperance of input */
 .input {
   padding: 0.5rem;
   border: 0;
@@ -92,27 +98,23 @@ label {
   margin-top: 0.4rem;
   width: 85%;
 }
-
-.firstname-card {
-  grid-area: first;
+/* general apperance  of the "continue-button" */
+.con-button {
+  padding: 0rem 0.5rem;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(177, 177, 177);
+  margin-top: 0.4rem;
+  width: 50%;
+  right: 0;
+}
+.con-button:hover {
+  cursor: pointer;
+  background-color: grey;
+  transition: .5s ease;
 }
 
-.lastname-card {
-  grid-area: last;
-}
-
-.email-card {
-  grid-area: email;
-}
-
-.number-card {
-  grid-area: mobilePhoneNumber;
-}
-
-.confirm-email-card {
-  grid-area: confirmEmail;
-}
-
+/* apperance of the inputed info */
 .input-text {
   color: rgb(205, 205, 205);
   margin: 0;
@@ -123,7 +125,9 @@ label {
   position: relative;
 }
 
-.edit-button {
+
+/* genearl apperance of edit-button */
+.edit-btn {
   position: absolute;
   text-decoration: underline;
   border: 0;
@@ -136,7 +140,7 @@ label {
   top: 0;
   right: 0;
 }
-.edit-button:hover {
+.edit-btn:hover {
   cursor: pointer;
   color: grey;
   transition: 0.5s ease;
@@ -147,50 +151,133 @@ label {
 
 
 
-
-
-
-.shipping-adress-area {
+/* CUSTOMER INFORMATION */
+/* grids containing input elements */
+.customer-info-area {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: 
   "first last"
   "email mobilePhoneNumber"
-  "confirmEmail .";
+  "confirmEmail ."
+  "btn .";
   grid-gap: 0.5rem;
   position: relative;
+}
+
+/* defining ever input element to the grid */
+.firstname-card {
+  grid-area: first;
+}
+.lastname-card {
+  grid-area: last;
+}
+.email-card {
+  grid-area: email;
+}
+.number-card {
+  grid-area: mobilePhoneNumber;
+}
+.confirm-email-card {
+  grid-area: confirmEmail;
+}
+.continue-button1 {
+  grid-area: btn;
+}
+/* inputed info is hidden here */
+#customer-inputed-info {
+  display: none;
+}
+
+
+
+/* SHIPPING ADRESS */
+/* grids containing input elements */
+#shipping-adress-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "adress1 adress2"
+  "city zipcode"
+  "country ."
+  "btn2 .";
+  grid-gap: 0.5rem;
+  position: relative;
+  display: none;
+}
+/* defining ever input element to the grid */
+.adress1-card {
+  grid-area: adress1;
+}
+.adress2-card {
+  grid-area: adress2;
+}
+.city-card {
+  grid-area: city;
+}
+.zipcode-card {
+  grid-area: zipcode;
+}
+.country-card {
+  grid-area: country;
+}
+.continue-button2 {
+  grid-area: btn2;
+}
+
+/* inputed info is hidden here */
+#shipping-inputed-info {
+  display: none;
+}
+
+
+
+/* CARD */
+/* grids containing input elements */
+#card-adress-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "cardholder cardnumber"
+  "exmonth exyear"
+  "cvv ."
+  "btn3 .";
+  grid-gap: 0.5rem;
+  position: relative;
+  display: none;
+}
+/* defining ever input element to the grid */
+.cardholder-card {
+  grid-area: cardholder;
+}
+.cardnumber-card {
+  grid-area: cardnumber;
+}
+.exmonth-card {
+  grid-area: exmonth;
+}
+.exyear-card {
+  grid-area: exyear;
+}
+.cvv-card {
+  grid-area: cvv;
+}
+.continue-button3 {
+  grid-area: btn3;
+}
+
+/* inputed info is hidden here */
+#card-inputed-info {
+  display: none;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* divider field*/
+/* DIVIDER FIELD*/
 .divider-field {
   grid-area: divider;
   display: flex;
@@ -209,14 +296,49 @@ label {
 /* cart field */
 .cart-field {
   grid-area: cartfield;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 150px 150px 150px 150px 125px;
+  grid-template-areas: 
+  "headline"
+  "."
+  "item1"
+  "."
+  "."
+  "check-button";
+}
+.cart-headline {
+  grid-area: headline;
 }
 
+.checkout-area {
+  grid-area: check-button;
+  display: flex;
+  justify-content: center;
+  grid-row: 6;
+  justify-content: center;
+  padding: 0.5rem 0rem 1rem 0rem;
 
+}
 
+.checkout-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: Verdana, Tahoma, sans-serif;
+  padding: 1rem 4rem;
+  background-color: #E5C89B;
+  border-radius: 0;
+  border: 0;
 
-
-
-
+  /* https://stackoverflow.com/questions/16644726/css-making-a-buttons-background-color-two-different-solid-colors-not-gradient */
+  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgb(255,255,255) 51%);
+}
+.checkout-button:hover {
+  background-color: rgb(212, 184, 142);
+  cursor: pointer;
+}
 
 footer {
   grid-area: footer;
