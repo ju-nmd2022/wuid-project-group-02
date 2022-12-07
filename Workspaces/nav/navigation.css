@@ -5,20 +5,48 @@ body {
   background-color: grey;
 }
 nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "menu logo list";
   background-color: white;
   height: 50px;
   padding: 1rem;
 }
 
+/* menu area */
+.menu-area {
+  grid-area: menu;
+  display: flex;
+  justify-content: start;
+}
+
+/* logo area */
+.logo-area {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+}
+/* logo */
+.logo:hover {
+  cursor: pointer;
+}
+
+/* list area (searchbar + profile, heart, bag icons) */
+.list-area {
+  grid-area: list;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 
 /* list */
 li{
-  display: inline-block;
+  list-style: none;
   padding: 0rem 0.5rem 0rem 0rem;
 }
+
 button {
   background-color: transparent;
   border: none;
@@ -28,23 +56,15 @@ button {
 button:hover {
   cursor: pointer;
   background-color: rgba(68, 68, 68, 0.1);
+  transition: .5s ease;
 }
+
 .icon {
   height: 40px;
   width: 40px;
 }
-.nav_icons {
-  display: flex;
-  align-items: center;
-}
 .btn-heart-icon {
   padding: 0.55rem 0.25rem 0.1rem 0.25rem;
-}
-
-
-/* logo */
-.nav_logo {
-  display: block;
 }
 
 
@@ -54,9 +74,11 @@ button:hover {
   height: 32.5px;
   width: 32.5px;
 }
+/* list tag, including input */
 .searchbox {
   width: 15rem;
 }
+/* input searchbar */
 .searchbar{
   background-color: transparent;
   border: none;
@@ -68,6 +90,7 @@ button:hover {
   align-items: center;
   border-bottom: 2px solid black;
 }
+
 
 
 /* category-slideIn  */
@@ -99,6 +122,7 @@ button:hover {
 .category-slideIn.active {
   left: 0;
 }
+
 
 /* cart-slideIn */
 /* https://www.youtube.com/watch?v=rGAbT8ykGB0 */
