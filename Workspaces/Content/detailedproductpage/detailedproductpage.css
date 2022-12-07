@@ -1,0 +1,234 @@
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 80px 1fr 80px;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "content"
+  "footer";
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(0, 118, 0);
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(0, 77, 0);
+}
+
+content {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(0, 193, 0);
+  z-index: 1;
+}
+
+
+/* headline, p and product image attributes */
+
+h2, h3{
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.productimage{
+  height: 100vh;
+    bottom: 0px;
+    width: 50vw;
+    object-fit: cover;
+}
+
+
+/* item flexbox and content such as description, name, size etc */
+
+.item-container {
+    display:flex;
+    flex-direction: row;
+}
+
+.item-textbox{
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  width: 50vw;
+  margin-top: 100px;
+}
+
+.item-price{
+    border-bottom: 2px solid black;
+    width: 170px;
+    margin-right: 0;
+    font-size: 1rem;
+}
+
+/* size dropdown menu */
+
+.sizes-title {
+  position: relative;
+  display: inline-block;
+  border-bottom: 2px solid black;
+  width: 170px;
+  cursor: pointer;
+}
+
+.sizes-title:hover .arrow-down{
+  animation-name: dropdown-arrow;
+  animation-duration: infinite;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform: rotate(180deg);
+  transition: 0.7s;
+
+}
+
+
+/* the following dropdown menu is from source and has been adapted https://www.w3schools.com/css/css_dropdowns.asp */
+
+
+.sizes-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 170px;
+  border: solid #dedede;
+}
+
+.sizes-dropdown p {
+  color: black;
+  font-weight: normal;
+  padding: 12px 16px;
+  margin: 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.sizes-dropdown p:hover { 
+  background-color: #dedede;
+  cursor: pointer;
+}
+
+.sizes-title:hover .sizes-dropdown { 
+  display: block;
+}
+
+/* material and care dropdown menu */
+
+
+.material-title{
+  border-bottom: 2px solid black;
+  width: 170px;
+  margin-right: 0;
+  margin-top: 90px;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.material-title:hover .arrow-down{
+animation-name: dropdown-arrow;
+animation-duration: infinite;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+transform: rotate(180deg);
+transition: 0.7s;
+}
+
+
+  .material-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 170px;
+
+  }
+  
+  .material-dropdown p {
+    color: black;
+    font-weight: normal;
+    margin: 0px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+.material-title:hover .material-dropdown { 
+  display: block;
+}
+
+/* heart and arrow down icons */
+
+.heart, .arrow-down{
+  height: 20px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.arrow-down:hover{ 
+  animation-name: dropdown-arrow;
+  animation-duration: infinite;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform: rotate(180deg);
+  transition: 0.7s;
+
+  }
+
+
+/* the following transform code is from source and has been adapted https://stackoverflow.com/questions/22754040/text-rotation-with-google-chrome-using-css */
+
+/* vertial aquadora */
+
+#vertical-item-name{
+  position:absolute;
+  bottom: 16%;
+  right:80px;
+  height: 40px;
+  line-height: 40px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  color: lightgrey;
+  font-size: 60px;
+  font-weight: normal;
+  transform-origin: 100% 0;
+}
+
+/* add to cart button */
+
+.checkout-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: Verdana, Tahoma, sans-serif;
+  padding: 1rem 4rem;
+  background-color: #E5C89B;
+  border-radius: 0;
+  margin-top: 100px;
+  margin-left: 200px;
+  border: 0;
+  
+    /* https://stackoverflow.com/questions/16644726/css-making-a-buttons-background-color-two-different-solid-colors-not-gradient */
+  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgb(255,255,255) 51%);
+  }
+
+  .checkout-button:hover {
+    background-color: rgb(212, 184, 142);
+  }
+ 

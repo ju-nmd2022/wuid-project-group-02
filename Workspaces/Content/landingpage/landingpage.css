@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 80px 1fr 80px;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "content"
+  "footer";
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(0, 118, 0);
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(0, 77, 0);
+}
+
+content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 88vh;
+  grid-template-areas: 
+  "womenimage menimage";
+}
+
+
+.landingpage-men-side, .landingpage-women-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landingpage-women-side {
+  grid-area: womenimage;
+  background-image: url("female_fashion.jpg");
+  background-size: cover;
+  height: 100%;
+}
+
+.landingpage-men-side {
+  grid-area: menimage;
+  background-image: url("men_fashion.jpg");
+  background-size: cover;
+  height: 100%;
+  
+}
+.landingpage-text {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: wheat;
+}
+.landingpage-men-side:hover, .landingpage-women-side:hover, .landingpage-text:hover {
+  cursor: pointer;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(0, 193, 0);
+}

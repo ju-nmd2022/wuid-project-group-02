@@ -292,20 +292,20 @@ content {
 /* section 1 properties */
 .section1 {
   grid-area: section1;
-  grid-template-columns:  400px 400px 400px 400px 0rem;
+  grid-template-columns:  400px 400px 400px 400px 400px 0rem;
   grid-template-rows: 650px 1rem;
   grid-template-areas: 
-   "image1 image2 image3 image7 ."
-   ". . . . .";
+   "image1 image2 image3 image4 image5 ."
+   ". . . . . .";
 }
 /* section 2 properties */
 .section2 {
   grid-area: section2;
-  grid-template-columns:  400px 400px 400px 0rem;
+  grid-template-columns:  400px 400px 400px 400px 400px 0rem;
   grid-template-rows: 650px 1rem;
   grid-template-areas: 
-    "image4 image5 image6 ."
-    ". . . .";
+    "image6 image7 image8 image9 image10 ."
+    ". . . . . .";
 }
 /* section 1 and 2 scroll properties (product horizontal scroll) */
 /* ref: https://www.youtube.com/watch?v=2_E5uoiLCLY */
@@ -459,16 +459,25 @@ content {
 .product-card4 {
   grid-area: image4;
 }
-
-/* section2 */
 .product-card5 {
   grid-area: image5;
 }
+
+/* section2 */
 .product-card6 {
   grid-area: image6;
 }
 .product-card7 {
   grid-area: image7;
+}
+.product-card8 {
+  grid-area: image8;
+}
+.product-card9 {
+  grid-area: image9;
+}
+.product-card10 {
+  grid-area: image10;
 }
 
 
