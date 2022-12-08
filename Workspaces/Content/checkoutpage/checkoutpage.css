@@ -1,11 +1,12 @@
 * {
-  font-family: verdana, Geneva, Tahoma, sans-serif;
+  /* https://www.w3schools.com/css/css_font_google.asp */
+  font-family: "Inter", sans-serif 
 }
 body {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 35px 80px 88vh 80px;
+  grid-template-rows: 35px 80px 100vh 80px;
   grid-template-areas: 
   "header"
   "nav"
@@ -19,17 +20,105 @@ header {
 }
 nav {
   grid-area: nav;
-  background-color: rgb(0, 77, 0);
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px;
+  grid-template-areas: 
+  "menu-area logo-area list-area";
+  background-color: white;
+  padding: 0 .5rem;
 }
 
+/* menu area */
+.menu-area {
+  grid-area: menu-area;
+  display: flex;
+  justify-content: start;
+}
+
+/* logo area */
+.logo-area {
+  grid-area: logo-area;
+  display: flex;
+  justify-content: center;
+}
+/* logo */
+.logo {
+  padding: 0.5rem 0;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+/* list area (searchbar + profile, heart, bag icons) */
+.list-area {
+  grid-area: list-area;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+/* list */
+li{
+  list-style: none;
+  padding: 0rem 0.5rem 0rem 0rem;
+}
+
+.searchbar-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.25rem 0.25rem 0.1rem 0.25rem;
+}
+.searchbar-button:hover {
+  cursor: pointer;
+  background-color: rgba(68, 68, 68, 0.1);
+  transition: .5s ease;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+}
+.btn-heart-icon {
+  padding: 0.55rem 0.25rem 0.1rem 0.25rem;
+}
+
+
+/* searchbar */
+/* https://www.youtube.com/watch?v=9hnJsNIBq1g */
+.search_icon {
+  height: 32.5px;
+  width: 32.5px;
+}
+/* list tag, including input */
+.searchbox {
+  width: 15rem;
+}
+/* input searchbar */
+.searchbar{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+
+
+/* CONTENT */
 content {
   grid-area: content;
   background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr 1.7fr 0.5rem 1.2fr;
-  grid-template-rows: 2rem 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas: 
-  ". . . ."
   "imagefield checkoutfield divider cartfield";
 }
 
@@ -47,19 +136,33 @@ content {
   grid-area: checkoutfield;
   display: grid;
   grid-template-columns: 0.2fr 1fr 0.2fr;
-  grid-template-rows: 0.3fr 1fr;
+  grid-template-rows: 80px 0.2fr 1fr;
   grid-template-areas: 
+  "headline headline headline"
   ". . ."
   ". checkout .";
 }
+/* general apperance of headlines Billing Adress & CART */
+.document-headline {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+}
 
+.billing-adress-headline {
+  grid-area: headline;
+}
+
+/* dedicated space to the grid */
 .checkout-step-area {
   grid-area: checkout;
 }
-.customer-infoformation {
+/* simple position of box (optional) */
+.customer-information {
   position: relative;
 }
 
+/* Headline for each step */
 .checkout-headline {
   font-size: 1rem;
   font-weight: 550;
@@ -67,23 +170,15 @@ content {
   margin-top: 1.5rem;
 }
 
-.customer-info-area {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "first last"
-  "email mobilePhoneNumber"
-  "confirmEmail .";
-  grid-gap: 0.5rem;
-  position: relative;
 
-}
 
+/* name above the input element */
 label {
   display: block;
   width: 100%;
 }
+
+/* general apperance of input */
 .input {
   padding: 0.5rem;
   border: 0;
@@ -92,27 +187,23 @@ label {
   margin-top: 0.4rem;
   width: 85%;
 }
-
-.firstname-card {
-  grid-area: first;
+/* general apperance  of the "continue-button" */
+.con-button {
+  padding: 0rem 0.5rem;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgb(177, 177, 177);
+  margin-top: 0.4rem;
+  width: 50%;
+  right: 0;
+}
+.con-button:hover {
+  cursor: pointer;
+  background-color: grey;
+  transition: .5s ease;
 }
 
-.lastname-card {
-  grid-area: last;
-}
-
-.email-card {
-  grid-area: email;
-}
-
-.number-card {
-  grid-area: mobilePhoneNumber;
-}
-
-.confirm-email-card {
-  grid-area: confirmEmail;
-}
-
+/* apperance of the inputed info */
 .input-text {
   color: rgb(205, 205, 205);
   margin: 0;
@@ -123,7 +214,9 @@ label {
   position: relative;
 }
 
-.edit-button {
+
+/* genearl apperance of edit-button */
+.edit-btn {
   position: absolute;
   text-decoration: underline;
   border: 0;
@@ -136,7 +229,7 @@ label {
   top: 0;
   right: 0;
 }
-.edit-button:hover {
+.edit-btn:hover {
   cursor: pointer;
   color: grey;
   transition: 0.5s ease;
@@ -147,50 +240,133 @@ label {
 
 
 
-
-
-
-.shipping-adress-area {
+/* CUSTOMER INFORMATION */
+/* grids containing input elements */
+.customer-info-area {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: 
   "first last"
   "email mobilePhoneNumber"
-  "confirmEmail .";
+  "confirmEmail ."
+  "btn .";
   grid-gap: 0.5rem;
   position: relative;
+}
+
+/* defining ever input element to the grid */
+.firstname-card {
+  grid-area: first;
+}
+.lastname-card {
+  grid-area: last;
+}
+.email-card {
+  grid-area: email;
+}
+.number-card {
+  grid-area: mobilePhoneNumber;
+}
+.confirm-email-card {
+  grid-area: confirmEmail;
+}
+.continue-button1 {
+  grid-area: btn;
+}
+/* inputed info is hidden here */
+#customer-inputed-info {
+  display: none;
+}
+
+
+
+/* SHIPPING ADRESS */
+/* grids containing input elements */
+#shipping-adress-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "adress1 adress2"
+  "city zipcode"
+  "country ."
+  "btn2 .";
+  grid-gap: 0.5rem;
+  position: relative;
+  display: none;
+}
+/* defining ever input element to the grid */
+.adress1-card {
+  grid-area: adress1;
+}
+.adress2-card {
+  grid-area: adress2;
+}
+.city-card {
+  grid-area: city;
+}
+.zipcode-card {
+  grid-area: zipcode;
+}
+.country-card {
+  grid-area: country;
+}
+.continue-button2 {
+  grid-area: btn2;
+}
+
+/* inputed info is hidden here */
+#shipping-inputed-info {
+  display: none;
+}
+
+
+
+/* CARD */
+/* grids containing input elements */
+#card-adress-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "cardholder cardnumber"
+  "exmonth exyear"
+  "cvv ."
+  "btn3 .";
+  grid-gap: 0.5rem;
+  position: relative;
+  display: none;
+}
+/* defining ever input element to the grid */
+.cardholder-card {
+  grid-area: cardholder;
+}
+.cardnumber-card {
+  grid-area: cardnumber;
+}
+.exmonth-card {
+  grid-area: exmonth;
+}
+.exyear-card {
+  grid-area: exyear;
+}
+.cvv-card {
+  grid-area: cvv;
+}
+.continue-button3 {
+  grid-area: btn3;
+}
+
+/* inputed info is hidden here */
+#card-inputed-info {
+  display: none;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* divider field*/
+/* DIVIDER FIELD*/
 .divider-field {
   grid-area: divider;
   display: flex;
@@ -209,7 +385,115 @@ label {
 /* cart field */
 .cart-field {
   grid-area: cartfield;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 150px 150px 150px 150px 125px;
+  grid-template-areas: 
+  "headline"
+  "item1"
+  "."
+  "."
+  "."
+  "check-button";
 }
+.cart-headline {
+  grid-area: headline;
+}
+
+.checkout-area {
+  grid-area: check-button;
+  display: flex;
+  justify-content: center;
+  grid-row: 6;
+  justify-content: center;
+  padding: 0.5rem 0rem 1rem 0rem;
+
+}
+
+.checkout-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: Verdana, Tahoma, sans-serif;
+  padding: 1rem 4rem;
+  background-color: #E5C89B;
+  border-radius: 0;
+  border: 0;
+
+  /* https://stackoverflow.com/questions/16644726/css-making-a-buttons-background-color-two-different-solid-colors-not-gradient */
+  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgb(255,255,255) 51%);
+}
+.checkout-button:hover {
+  background-color: rgb(212, 184, 142);
+  cursor: pointer;
+}
+
+.item-card {
+  grid-area: item1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "image name price"
+  "image remove amount";
+  padding: 1rem 0;
+  border-bottom:  rgb(224, 224, 224) 1px solid;
+  border-top: rgb(224, 224, 224) 1px solid;
+
+  
+}
+
+.item-image-area {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+
+}
+.item-image {
+  height: 100%;
+}
+.item-name-size-area {
+  grid-area: name;
+  padding-top: 0.5rem;
+}
+
+.item-price-area {
+  grid-area: price;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 2.5rem 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.item-remove-area {
+  grid-area: remove;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
+}
+.remove-button {
+  text-decoration: underline;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color: rgb(205, 205, 205);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0;
+}
+.remove-button:hover {
+  cursor: pointer;
+  color: grey;
+  transition: 0.5s ease;
+}
+.item-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+
 
 
 
