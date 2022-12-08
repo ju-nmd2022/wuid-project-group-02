@@ -18,9 +18,13 @@ nav{
 .menu-area {
   grid-area: menu-area;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
+  align-items: center;
 }
 
+.menu-icon{
+ padding: 0rem 0 0.2rem 0;
+}
 /* logo area */
 .logo-area {
   grid-area: logo-area;
@@ -60,6 +64,7 @@ li{
   background-color: rgba(68, 68, 68, 0.1);
   transition: .5s ease;
 }
+
 
 .icon {
   height: 40px;
