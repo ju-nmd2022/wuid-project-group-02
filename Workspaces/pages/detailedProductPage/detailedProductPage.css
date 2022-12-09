@@ -45,6 +45,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-right: 2rem;
 }
 
 .menu-icon{
@@ -175,6 +176,7 @@ content {
 
 .h2-header{
   font-weight: bolder;
+  width: 5rem;
 }
 
 .size-text{
@@ -218,6 +220,8 @@ margin-top: 100px;
   width: 170px;
   margin-right: 0;
   font-size: 1rem;
+  display: flex;
+  align-items:center;
 }
 
 /* size dropdown menu */
@@ -277,22 +281,25 @@ display: block;
 
 
 .material-title{
-border-bottom: 2px solid black;
-width: 170px;
-margin-right: 0;
-margin-top: 90px;
-font-size: 1rem;
-cursor: pointer;
-
+  border-bottom: 2px solid black;
+  width: 170px;
+  margin-right: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.h2-header1 {
+  width: 140px;
+  display: inline-block;
 }
 
-.material-title:hover .arrow-down-detailed{
+.material-title:hover .arrow-down-detailed2{
 animation-name: dropdown-arrow;
 animation-duration: infinite;
 animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
 transform: rotate(180deg);
 transition: 0.7s;
+cursor: pointer;
 }
 
 
@@ -323,10 +330,19 @@ display: block;
 height: 20px;
 cursor: pointer;
 transition: 0.7s;
+margin-left: 70px;
+}
+
+.arrow-down-detailed2 {
+  height: 20px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.7s;
+  margin-left: 5px;
 
 }
 
-.arrow-down-detailed:hover{ 
+.arrow-down-detailed:hover .arrow-down-detailed2:hover{ 
 animation-name: dropdown-arrow;
 animation-duration: infinite;
 animation-iteration-count: infinite;
@@ -335,7 +351,12 @@ transform: rotate(180deg);
 transition: 0.7s;
 
 }
-
+.arrow-down-detailed {
+  margin-left: 113px;
+}
+.h2-header2 {
+  display: inline-block;
+}
 
 /* the following transform code is from source and has been adapted https://stackoverflow.com/questions/22754040/text-rotation-with-google-chrome-using-css */
 
@@ -343,7 +364,7 @@ transition: 0.7s;
 
 #vertical-item-name{
 position:absolute;
-bottom: 27%;
+bottom: 22.8%;
 right:7%;
 height: 40px;
 line-height: 40px;
@@ -368,6 +389,7 @@ background-color: #E5C89B;
 border-radius: 0;
 margin-top: 100px;
 margin-left: 200px;
+height: 8rem;
 border: 0;
 
   /* https://stackoverflow.com/questions/16644726/css-making-a-buttons-background-color-two-different-solid-colors-not-gradient */
@@ -552,3 +574,8 @@ footer {
     background-color: rgb(212, 184, 142);
   }
 
+  @media screen and (max-width: 700px){
+    .searchbox{
+      display: none;
+    }
+  }
