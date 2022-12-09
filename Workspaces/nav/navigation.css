@@ -35,6 +35,7 @@ nav{
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-right: 2rem;
 }
 
 .menu-icon{
@@ -95,10 +96,12 @@ nav{
   border-radius: 0.75rem;
   padding: 0.25rem 0.25rem 0.1rem 0.25rem;
 }
-.searchbar-button:hover {
+.search_icon:hover, .menu-icon:hover, .profile_icon:hover, .heart-icon:hover, .cart-icon:hover{
   cursor: pointer;
   background-color: rgba(68, 68, 68, 0.1);
   transition: .5s ease;
+  border-radius: 0.75rem;
+
 }
 
 .icon {
@@ -112,7 +115,10 @@ nav{
 .search_icon {
   height: 32.5px;
   width: 32.5px;
+  margin-top: 0.5rem;
 }
+
+
 /* list tag, including input */
 .searchbox {
   width: 15rem;
@@ -135,6 +141,7 @@ nav{
   height: 32.5px;
   width: 32.5px;
 }
+
 /* list tag, including input */
 .searchbox {
   width: 15rem;
@@ -251,3 +258,12 @@ footer {
   grid-area: footer;
   background-color: rgb(0, 193, 0);
 }
+
+@media screen and (max-width: 500px){
+  .searchbox{
+    display: none;
+  }
+}
+
+  
+
