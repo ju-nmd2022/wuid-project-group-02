@@ -1,6 +1,7 @@
 
 * {
   font-family:  "Inter", sans-serif;
+  margin: 0;
 }
 li {
     list-style: none;
@@ -9,11 +10,11 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 35px 80px 150vh 1fr;
+    grid-template-rows: 35px 80px 175vh 1fr;
     grid-template-areas: 
     "header"
     "nav"
-    "content"
+    "content2"
     "footer2";
     overflow-x: hidden;
   }
@@ -37,6 +38,9 @@ body {
     "menu-area logo-area list-area";
     background-color: white;
     padding: 0 1rem;
+  }
+  footer {
+    grid-area: footer2;
   }
   /* menu area */
 .menu-area {
@@ -165,7 +169,7 @@ body {
   
   
   content {
-  grid-area: content;
+  grid-area: content2;
   display: grid;
         grid-template-columns:  1fr 6fr;
         grid-template-rows: 0.5rem 700px 2rem 700px 2rem;
@@ -179,6 +183,7 @@ body {
         grid-gap: 0 2rem;
         overflow: hidden;
         width: 100vw;
+        height: 100%;
       }
 
 /* filter list */
@@ -572,9 +577,7 @@ body {
 
 
 
-footer {
-  grid-area: footer2;
-}
+
 
 .footersquare{
   margin-top: 150px;
