@@ -634,3 +634,15 @@ body {
     display: none;
   }
 }
+
+@media screen and (max-width: 1000px){
+  .header-text2{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .header-text3{
+    display: none;
+  }
+}
