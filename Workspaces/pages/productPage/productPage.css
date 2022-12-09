@@ -37,7 +37,7 @@ body {
     grid-template-areas: 
     "menu-area logo-area list-area";
     background-color: white;
-    padding: 0 1rem;
+    padding: 0 0.2rem;
   }
   footer {
     grid-area: footer2;
@@ -76,7 +76,7 @@ body {
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-right: 1rem;
+    padding-right: 0.3rem;
   }
   
   /* list */
