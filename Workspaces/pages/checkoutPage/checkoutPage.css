@@ -644,7 +644,6 @@ label {
 footer {
   grid-area: footer;
 }
-
 .footersquare{
   margin-top: 150px;
   border-radius: 10px;
@@ -693,5 +692,3 @@ footer {
   grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
 }
-
-
