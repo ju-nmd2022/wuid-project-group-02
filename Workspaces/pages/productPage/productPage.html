@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="productPage.css" />
+    <title>Main</title>
+  </head>
+  <body>
+    <header> 
+        <div class="header-text">All tops 10% off!</div>
+        <div class="header-text">All jeans 15% off!</div>
+        <div class="header-text">All imposter 100% sus!</div>
+    </header>
+
+    <nav>      <!-- menu button -->
+        <div class="menu-area">
+          <button class="btn-menu-icon searchbar-button" onclick="showCategory()">
+            <img src="../images/menu_icon.png" class="menu-icon icon" />
+          </button>
+        </div>
+        <!-- logo -->
+        <div class="logo-area">
+          <img src="../images/omnia.png" class="logo" />
+        </div>
+        <!-- list -->
+        <ul class="list-area">
+          <!-- searchbar -->
+          <li>
+            <img src="../images/search.png" class="search_icon icon" />
+          </li>
+          <li class="searchbox">
+            <input
+              class="searchbar"
+              type="text"
+              placeholder="quirky search text"
+            />
+          </li>
+          <!-- profile button -->
+          <li class="profile">
+            <button class="btn-profile-icon searchbar-button">
+              <img src="../images/smile_icon4.png" class="profile_icon icon" />
+            </button>
+          </li>
+          <!-- heart button -->
+          <li>
+            <button class="btn-heart-icon searchbar-button">
+              <img src="../images/heart.png" class="heart-icon icon" />
+            </button>
+          </li>
+          <!-- cart button -->
+          <li>
+            <button class="btn-cart-icon searchbar-button" onclick="showCart()">
+              <img src="../images/bag.png" class="cart-icon icon" />
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <content>
+        <div id="category-slideIn" class="category-slideIn">
+          <ul class="list-category-nav">
+            <li class="list-headline-nav">WOMEN</li>
+            <li class="list-nav">tops</li>
+            <li class="list-nav">bottoms</li>
+            <li class="list-nav">dresses</li>
+            <li class="list-nav">shoes</li>
+            <li class="list-nav">accessories</li>
+            <li class="list-whitespace">"blank"</li>
+            <li class="list-headline">MEN</li>
+            <li class="list-nav">tops</li>
+            <li class="list-nav">bottoms</li>
+            <li class="list-nav">suits</li>
+            <li class="list-nav">shoes</li>
+            <li class="list-nav">accessories</li>
+            <li class="list-whitespace">"blank"</li>
+            <li class="list-whitespace">"blank"</li>
+            <li class="list-nav">FALL COLLECTION</li>
+            <li class="list-whitespace">"blank"</li>
+            <li class="list-nav">NEWEST COLLECTION</li>
+            <li class="list-whitespace">"blank"</li>
+            <li class="list-nav">DISCOUNTS</li>
+          </ul>
+        </div>
+  
+        <div id="cart-slideIn" class="cart-slideIn">
+          <container class="list-cart-nav">
+            <p class="list-headline-nav cart-underline">CART</p>
+          </container>
+          <div class="checkout-area-nav">
+            <a href="../checkoutPage/checkoutPage.html">
+              <button class="checkout-button">CHECKOUT</button>
+            </a>
+          </div>
+        </div>
+      </content>
+    </nav>
+    
+    <content>content.componentLandingPage</content>
+    <footer></footer>
+  </body>
+</html>
