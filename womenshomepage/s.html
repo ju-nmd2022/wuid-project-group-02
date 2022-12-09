@@ -11,19 +11,58 @@
     />
   </head>
   <body>
-    <header>l</header>
-    <nav>nav.components</nav>
+    <header>
+      <div class="header-text">All tops 10% off!</div>
+      <div class="header-text">All jeans 15% off!</div>
+      <div class="header-text">All imposter 100% sus!</div>
+    </header>
+    <nav>
+      <!-- menu button -->
+      <div class="menu-area">
+        <button class="btn-menu-icon searchbar-button" onclick="showCategory()">
+          <img src="../../images/menu_icon.png" class="menu-icon icon" />
+        </button>
+      </div>
+      <!-- logo -->
+      <div class="logo-area">
+        <img src="../../images/omnia.png" class="logo" />
+      </div>
+      <!-- list -->
+      <ul class="list-area">
+        <!-- searchbar -->
+        <li>
+          <img src="../../images/search.png" class="search_icon icon" />
+        </li>
+        <li class="searchbox">
+          <input
+            class="searchbar"
+            type="text"
+            placeholder="quirky search text"
+          />
+        </li>
+        <!-- profile button -->
+        <li class="profile">
+          <button class="btn-profile-icon searchbar-button">
+            <img src="../../images/smile_icon4.png" class="profile_icon icon" />
+          </button>
+        </li>
+        <!-- heart button -->
+        <li>
+          <button class="btn-heart-icon searchbar-button">
+            <img src="../../images/heart.png" class="heart-icon icon" />
+          </button>
+        </li>
+        <!-- cart button -->
+        <li>
+          <button class="btn-cart-icon searchbar-button" onclick="showCart()">
+            <img src="../../images/bag.png" class="cart-icon icon" />
+          </button>
+        </li>
+      </ul>
+    </nav>
     <content>
       <section class="section-category-area">
-        <div class="text-dropup">
-          <a href="#" class="category-list-text tops">TOPS</a>
-          <!-- <div class="dropup-content">
-            <a href="#">Dresses</a>
-            <a href="#">T-shirts</a>
-            <a href="#">Long-sleeve</a>
-            <a href="#">Body</a>
-          </div> -->
-        </div>
+        <a href="#" class="category-list-text tops">TOPS</a>
         <a href="#" class="category-list-text bottoms">BOTTOMS</a>
         <a href="#" class="category-list-text dresses">DRESSES</a>
         <a href="#" class="category-list-text shoes">SHOES</a>

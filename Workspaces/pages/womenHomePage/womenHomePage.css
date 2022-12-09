@@ -1,50 +1,62 @@
 * {
-  font-family:  "Inter", sans-serif;
-  list-style: none;
+  font-family: "Inter", sans-serif;
 }
 a {
   text-decoration: none;
 }
+li {
+  list-style: none;
+}
 body {
-  margin: 0;
-  overflow-x: hidden;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 35px 80px 88vh 80px;
-  grid-template-areas: 
-  "header"
-  "nav"
-  "content"
-  "footer";
-}
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35px 80px 88vh;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "content";
+    overflow-x: hidden;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: rgb(0, 118, 0);
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    column-gap: 30% ;
+    padding-left: 4rem;
+    color: white;
+  }
+  nav {
+    grid-area: nav;
+    background-color: rgb(0, 77, 0);
+    margin-top: 35px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px;
+    grid-template-areas: 
+    "menu-area logo-area list-area";
+    background-color: white;
+  }
 
-header {
-  grid-area: header;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  column-gap: 30% ;
-  padding-left: 4rem;
-  color: white;
-}
-
-nav {
-  grid-area: nav;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 80px;
-  grid-template-areas: 
-  "menu-area logo-area list-area";
-  background-color: white;
-  padding: 0 .5rem;
-}
-
-/* menu area */
+  /* menu area */
 .menu-area {
   grid-area: menu-area;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 1rem;
+  padding-right: 2rem;
 }
 
 .menu-icon{
@@ -72,6 +84,7 @@ nav {
   display: flex;
   justify-content: end;
   align-items: center;
+  padding-right: 1rem;
 }
 
 /* list */
@@ -159,30 +172,195 @@ nav {
   height: 2.5rem;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid black;;
+}
+
+  
+  content {
+    grid-area: content;
+  }
+
+.section-category-area {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  bottom: 50px;
+  z-index: 1;
+}
+.category-list-text {
+  color: white;
+  font-size: 2rem;
+}
+
+.tops:hover, .bottoms:hover, .dresses:hover, .shoes:hover, .accessories:hover {
+  cursor: default;
+  transform: rotate(-90deg);
+  transform-origin: 1rem;
+  transition: all 0.5s ease-in-out 0s;
+}
+.landingpageimg {
+  object-fit: cover;
+  height: 88vh;
+  width: 100vw;
+  position: relative;
 }
 
 
-content {
-  grid-area: content;
-  height: 88vh;
+
+@media screen and (max-width: 1200px) {
+  .section-category-area {
+    position: fixed;
+    display: flex;
+    gap: 2rem;
+    rotate: -90deg;
+    right: 25px;
+    top: 150px;
+    width: 20px;
+    z-index: 1;
+  }
+  .category-list-text {
+    font-size: 1.5rem;
+  }
+  .tops:hover, .bottoms:hover, .dresses:hover, .shoes:hover, .accessories:hover {
+    cursor: pointer;
+    color: #E5C89B;
+    transition: .5s ease;
+    border-bottom:  #E5C89B 3px solid;
+    transform: rotate(0deg);
+  }
+}
+.dropup-content {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(209, 209, 209);
+  height: 40px;
+  width: 100%;
+}
+
+.text-dropup {
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* CONTENT */
+/* category-slideIn  */
+.category-slideIn {
+  position: absolute;
+  left: -25rem;
+  width: 25rem;
+  height: 90%;
+  background: rgb(255, 255, 255);
+  transition: .4s;
+}
+.list-category-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0rem 0rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+  list-style: none;
+  white-space:pre
+}
+.list-headline-nav {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.list-headline-nav:hover {
+  cursor: pointer;
+}
+.list-whitespace {
+  visibility: hidden;
+}
+.category-slideIn.active {
+  left: 0;
+}
+
+
+/* cart-slideIn */
+/* https://www.youtube.com/watch?v=rGAbT8ykGB0 */
+.cart-slideIn {
+  position: absolute;
+  right: -25rem;
+  width: 25rem;
+  height: 90%;
+  background: rgb(255, 255, 255);
+  transition: .4s;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7rem 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "."
+  "."
+  "."
+  "."
+  "checkout";
+  
+}
+.cart-slideIn.active {
+  right: 0;
+}
+.cart-underline {
+  border-bottom: 2px solid black;
+}
+.list-cart-nav {
+  padding: 4rem 0rem 0rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.checkout-area-nav {
+  grid-area: checkout;
   display: flex;
   justify-content: center;
+  padding: 1rem 0rem 3rem 0rem;
+
+}
+.checkout-button-nav {
+  display: flex;
+  align-items: center;
+  border: 0;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding: 3rem 4rem;
+  background-color: #E5C89B;
+  border-radius: 0;
+
+  /* https://stackoverflow.com/questions/16644726/css-making-a-buttons-background-color-two-different-solid-colors-not-gradient */
+  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgb(255,255,255) 51%);
+}
+.checkout-button-nav:hover {
+  background-color: rgb(212, 184, 142);
+  cursor: pointer;
+}
+
+
+/* body, html{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+content {
+height: 100%;
+display: flex;
+justify-content: center;
 }
 .landingpageimg img {
   background-image: url("landingpageimg.jpeg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 900px;
+ 
+
 }
 
 .categories{
   display: flex;   
   justify-content: center;
   flex-direction:row;
-  /* display: grid; */
-  /* grid-template-columns: auto auto auto auto auto; */
+
   column-gap: 80px;    
   position: fixed;   
   bottom: 0%;
@@ -194,6 +372,37 @@ content {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 80px 1fr 80px;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "content"
+  "footer";
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(0, 118, 0);
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(0, 77, 0);
+}
+
+content {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(0, 193, 0);
+}
+
 .dropbtn {
 border: none;
 padding-top: 50px;
@@ -243,149 +452,4 @@ cursor: default;
   transform: rotate(-90deg);
   transform-origin:left;
   transition: all 0.3s ease-in-out 0s;
-}
-
-/* NAVIGATION */
-/* CONTENT */
-/* category-slideIn  */
-.category-slideIn {
-  position: absolute;
-  left: -25rem;
-  width: 25rem;
-  height: 90%;
-  background: rgb(255, 255, 255);
-  transition: .4s;
-}
-.list-category {
-  display: flex;
-  flex-direction: column;
-  padding: 4rem 0rem 0rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 200;
-  list-style: none;
-  white-space:pre
-}
-.list-headline {
-  font-size: 2rem;
-  font-weight: 300;
-}
-.list-headline:hover {
-  cursor: pointer;
-}
-.list-whitespace {
-  visibility: hidden;
-}
-.category-slideIn.active {
-  left: 0;
-}
-
-
-/* cart-slideIn */
-/* https://www.youtube.com/watch?v=rGAbT8ykGB0 */
-.cart-slideIn {
-  position: absolute;
-  right: -25rem;
-  width: 25rem;
-  height: 90%;
-  background: rgb(255, 255, 255);
-  transition: .4s;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 7rem 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
-  "."
-  "."
-  "."
-  "."
-  "checkout";
-  
-}
-.cart-slideIn.active {
-  right: 0;
-}
-.cart-underline {
-  border-bottom: 2px solid black;
-}
-.list-cart {
-  padding: 4rem 0rem 0rem 4rem;
-  font-size: 1.5rem;
-  font-weight: 200;
-}
-.checkout-area-nav {
-  grid-area: checkout;
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0rem 3rem 0rem;
-
-}
-.checkout-button {
-  display: flex;
-  align-items: center;
-  border: 0;
-  font-size: 1.5rem;
-  font-weight: 200;
-  padding: 3rem 4rem;
-  background-color: #E5C89B;
-  border-radius: 0;
-
-  /* https://stackoverflow.com/questions/16644726/css-making-a-buttons-background-color-two-different-solid-colors-not-gradient */
-  background-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgb(255,255,255) 51%);
-}
-.checkout-button:hover {
-  background-color: rgb(212, 184, 142);
-  cursor: pointer;
-}
-
-
-
-footer {
-  grid-area: footer;
-}
-.footersquare{
-  margin-top: 150px;
-  border-radius: 10px;
-  width: 100%;
-}
-.headline-footer{
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0;
-  text-align:start;
-  color: black;
-}
-.li-footer{
-  font-size: 1rem;
-  list-style-type: none;
-  text-align: start;
-  color: black;
-  cursor: pointer;
-
-}
-.li-footer:hover{
-  text-decoration: underline;
-
-}
-.ul-footer{
-  list-style-position: inside;
-  padding-left: 0;
-}
-.content{
-  background-color: white;
-  width: 100%;
-  padding: 50px;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 2rem 6rem;
-  grid-template-areas: "1 . 3"
-  ". 2 .";
-}
-.img-footer{
-  height: 50px;
-}
-.payments{
-  grid-area: 2;
-  display: grid;
-  grid-template-columns: 100px 200px;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 1rem;
-}
+} */
