@@ -1,120 +1,122 @@
+* {
+  font-family: "Inter";
+}
 
 
 body, html{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-content {
   height: 100%;
   display: flex;
   justify-content: center;
 }
+content {
+height: 100%;
+display: flex;
+justify-content: center;
+}
 .landingpageimg img {
-    background-image: url("landingpageimg.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    
+  background-image: url("landingpageimg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+ 
 
 }
 
 .categories{
-    display: flex;   
-    justify-content: center;
-    flex-direction:row;
-    /* display: grid; */
-    /* grid-template-columns: auto auto auto auto auto; */
-    column-gap: 80px;    
-    position: fixed;   
-    bottom: 0%;
-    top: 600px;
-    padding: 0 0 2rem 0;
-    color: white;
-    font-size:xx-large;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+  display: flex;   
+  justify-content: center;
+  flex-direction:row;
 
-body {
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 35px 80px 1fr 80px;
-    grid-template-areas: 
-    "header"
-    "nav"
-    "content"
-    "footer";
-  }
-  
-  header {
-    grid-area: header;
-    background-color: rgb(0, 118, 0);
-  }
-  nav {
-    grid-area: nav;
-    background-color: rgb(0, 77, 0);
-  }
-  
-  content {
-    grid-area: content;
-  }
-  
-  footer {
-    grid-area: footer;
-    background-color: rgb(0, 193, 0);
-  }
-
-.dropbtn {
-  border: none;
+  column-gap: 80px;    
+  position: fixed;   
+  bottom: 0%;
+  top: 600px;
+  padding: 0 0 2rem 0;
+  color: white;
+  font-size:xx-large;
+  font-family: Arial, Helvetica, sans-serif;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35px 80px 1fr 80px;
+  grid-template-areas: 
+  "header"
+  "nav"
+  "content"
+  "footer";
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(0, 118, 0);
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(0, 77, 0);
+}
+
+content {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(0, 193, 0);
+}
+
+.dropbtn {
+border: none;
+padding-top: 50px;
+padding-bottom: 50px;
+}
+
 .dropup {
-  position: relative;
-  display: inline-block;
-  bottom: 50px;
+position: relative;
+display: inline-block;
+bottom: 50px;
 }
 
 .dropup-content {
-  display: none;
-  position: absolute;
-  bottom: 50px;
-  background-color: #919191;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+display: none;
+position: absolute;
+bottom: 50px;
+background-color: #919191;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
 }
 
 .dropup-content a {
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+color: rgb(255, 255, 255);
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
 }
 
 .dropup-content a:hover {
-  background-color: #ddd;
-  color: rgb(31, 31, 31);
+background-color: #ddd;
+color: rgb(31, 31, 31);
 }
 
 .dropup:hover .dropup-content {
-  display: block;
-  margin-left: 30px;
+display: block;
+margin-left: 30px;
 }
 
 .dropupbtn {
-  transition: all 0.7s ease-in-out 0s;
+transition: all 0.7s ease-in-out 0s;
 }
 .dropbtn:hover {
-  cursor: default;
-    transform: rotate(-90deg);
-    transform-origin:left;
-    transition: all 0.3s ease-in-out 0s;
+cursor: default;
+  transform: rotate(-90deg);
+  transform-origin:left;
+  transition: all 0.3s ease-in-out 0s;
 }

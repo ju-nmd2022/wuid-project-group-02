@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="checkoutPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
+    <script src="navigation.js" defer></script>
+    <script src="checkoutpage.js" defer></script>
+    <title>checkoutPage</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-text">All tops 10% off!</div>
+      <div class="header-text">All jeans 15% off!</div>
+      <div class="header-text">All imposter 100% sus!</div>
+    </header>
+    <nav>
+      <!-- menu button -->
+      <div class="menu-area">
+        <button class="btn-menu-icon searchbar-button" onclick="showCategory()">
+          <img src="../../images/menu_icon.png" class="menu-icon icon" />
+        </button>
+      </div>
+      <!-- logo -->
+      <div class="logo-area">
+        <img src="../../images/omnia.png" class="logo" />
+      </div>
+      <!-- list -->
+      <ul class="list-area">
+        <!-- searchbar -->
+        <li>
+          <img src="../../images/search.png" class="search_icon icon" />
+        </li>
+        <li class="searchbox">
+          <input
+            class="searchbar"
+            type="text"
+            placeholder="quirky search text"
+          />
+        </li>
+        <!-- profile button -->
+        <li class="profile">
+          <button class="btn-profile-icon searchbar-button">
+            <img src="../../images/smile_icon4.png" class="profile_icon icon" />
+          </button>
+        </li>
+        <!-- heart button -->
+        <li>
+          <button class="btn-heart-icon searchbar-button">
+            <img src="../../images/heart.png" class="heart-icon icon" />
+          </button>
+        </li>
+        <!-- cart button -->
+        <li>
+          <button class="btn-cart-icon searchbar-button" onclick="showCart()">
+            <img src="../../images/bag.png" class="cart-icon icon" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <content>
+      <div class="image-field">
+        <img
+          src="../../images/checkout-image.jpeg"
+          alt="alttext"
+          class="checkout-image"
+        />
+      </div>
+      <container class="checkout-field">
+        <div class="billing-adress-headline document-headline">Billing adress</div>
+        <section class="checkout-step-area">
+          <div class="customer-information checkout-step">
+            <p class="checkout-headline">
+              Customer information
+            </p>
+            <!-- input field - customer information -->
+            <div id="customer-info-area" class="customer-info-area">
+              <div class="firstname-card">
+                <label>first name</label>
+                <input type="text" class="input" placeholder="first name" />
+              </div>
+              <div class="lastname-card">
+                <label>last name</label>
+                <input type="text" class="input" placeholder="last name"/>
+              </div>
+              <div class="email-card">
+                <label>email adress</label>
+                <input type="text" class="input" placeholder="email adress"/>
+              </div>
+              <div class="number-card">
+                <label>mobile phone number</label>
+                <input type="text" class="fullnumber input" placeholder="mobile phone number"/>
+              </div>
+              <div class="confirm-email-card">
+                <label>confirm email adress</label>
+                <input type="text" class="input" placeholder="confirm email adress"/>
+              </div>
+              <!-- button -->
+              <button class="continue-button1 con-button">Continue</button>
+            </div>
+          </div>
+          <!-- div -->
+          <div class="customer-inputed-info" id="customer-inputed-info">
+            <div class="input-area">
+              <p class="input-text" id="input-text"></p>
+              <button class="edit-button edit-btn">edit</button>
+            </div>
+            <div>
+              <p class="input-text" id="input-number"></p>
+            </div>
+          </div>
+
+
+
+
+          <!-- shipping area -->
+          <div class="customer-information">
+            <p class="checkout-headline">
+              Shipping adress
+            </p>
+            <!-- input field - customer information -->
+            <div class="shipping-adress-area" id="shipping-adress-area">
+              <!-- adress1 object -->
+              <div class="adress1-card">
+                <label>adress 1</label>
+                <input type="text" class="input" placeholder="adress1"/>
+              </div>
+              <!-- adress2 object -->
+              <div class="adress2-card">
+                <label>adress 2</label>
+                <input type="text" class="input" placeholder="adress2"/>
+              </div>
+              <!-- city object -->
+              <div class="city-card">
+                <label>city</label>
+                <input type="text" class="input" placeholder="city" />
+              </div>
+              <!-- zipcode object -->
+              <div class="zipcode-card">
+                <label>zip code</label>
+                <input type="text" class="input" placeholder="zip code"/>
+              </div>
+              <!-- country object -->
+              <div class="country-card">
+                <label>country</label>
+                <input type="text" class="input" placeholder="country"/>
+              </div>
+              <!-- button -->
+              <button class="continue-button2 con-button">Continue</button>
+            </div>
+          </div>
+          <div class="shipping-inputed-info" id="shipping-inputed-info">
+            <!-- input-area -->
+            <div class="input-area">
+              <!-- input-text-shipping -->
+              <p class="input-text" id="input-text-shipping"></p>
+              <button class="edit-button2 edit-btn">edit</button>
+            </div>
+            <div>
+              <!-- input-text-shipping2 -->
+              <p class="input-text" id="input-text-shipping2"></p>
+            </div>
+          </div>
+            
+            <!-- card area -->
+          <div class="customer-information checkout-step">
+            <p class="checkout-headline">
+              Card
+            </p>
+            <!-- input field - customer information -->
+            <div class="card-adress-area" id="card-adress-area">
+              <!-- adress1 object -->
+              <div class="cardholder-card">
+                <label>card holder</label>
+                <input type="text" class="input" placeholder="card holder"/>
+              </div>
+              <!-- adress2 object -->
+              <div class="cardnumber-card">
+                <label>card number</label>
+                <input type="text" class="input" placeholder="xxxx xxxx xxxx xxxx"/>
+              </div>
+              <!-- city object -->
+              <div class="exmonth-card">
+                <label>expiration month</label>
+                <input type="text" class="input" placeholder="xx"/>
+              </div>
+              <!-- zipcode object -->
+              <div class="exyear-card">
+                <label>expiration year</label>
+                <input type="text" class="input" placeholder="xx" />
+              </div>
+              <!-- cvv object -->
+              <div class="cvv-card">
+                <label>cvv</label>
+                <input type="text" class="input" placeholder="xxx"/>
+              </div>
+              <!-- con-button -->
+              <button class="continue-button3 con-button">Continue</button>
+            </div>
+          </div>
+          <div class="card-inputed-info" id="card-inputed-info">
+            <!-- input-area -->
+            <div class="input-area">
+              <!-- input-text-card -->
+              <p class="input-text" id="input-text-card"></p>
+              <!-- editbutton -->
+              <button class="edit-button3 edit-btn">edit</button>
+            </div>
+            <div>
+              <!-- input-text-card2 -->
+              <p class="input-text" id="input-text-card2"></p>
+            </div>
+          </section>
+      </container>
+      <!-- divider -->
+      <div class="divider-field">
+        <div class="divider"></div>
+      </div>
+      <!-- cart -->
+      <div class="cart-field">
+        <div class="cart-headline document-headline">Cart</div>
+        <!-- item in cart -->
+        <div class="item-card">
+          <div class="item-image-area">
+            <img src="../../images/checkoutdress.jpg" alt="hot-wamen" class="item-image">
+          </div>
+          <!-- name & size -->
+          <div class="item-name-size-area">
+            <div class="item-name">
+              aquadora
+            </div>
+            <div>
+              xxx-large
+            </div>
+            <div>
+              amount: 1
+            </div>
+          </div>
+          <!-- price -->
+          <div class="item-price-area">
+            293€
+          </div>
+          <!-- remove button -->
+          <div class="item-remove-area">
+            <button class="remove-button">remove</button>
+          </div>
+        </div>
+        <!-- checkout buttom -->
+        <div class="checkout-area">
+         <button class="checkout-button">COMPLETE ORDER</button>
+        </div>
+      </div>
+      <!-- NAVIGATION slidin -->
+      <div id="category-slideIn" class="category-slideIn">
+        <ul class="list-category-nav">
+          <li class="list-headline-nav">WOMEN</li>
+          <li class="list-nav">tops</li>
+          <li class="list-nav">bottoms</li>
+          <li class="list-nav">dresses</li>
+          <li class="list-nav">shoes</li>
+          <li class="list-nav">accessories</li>
+          <li class="list-whitespace">"blank"</li>
+          <li class="list-headline">MEN</li>
+          <li class="list-nav">tops</li>
+          <li class="list-nav">bottoms</li>
+          <li class="list-nav">suits</li>
+          <li class="list-nav">shoes</li>
+          <li class="list-nav">accessories</li>
+          <li class="list-whitespace">"blank"</li>
+          <li class="list-whitespace">"blank"</li>
+          <li class="list-nav">FALL COLLECTION</li>
+          <li class="list-whitespace">"blank"</li>
+          <li class="list-nav">NEWEST COLLECTION</li>
+          <li class="list-whitespace">"blank"</li>
+          <li class="list-nav">DISCOUNTS</li>
+        </ul>
+      </div>
+
+      <div id="cart-slideIn" class="cart-slideIn">
+        <container class="list-cart-nav">
+          <p class="list-headline-nav cart-underline">CART</p>
+        </container>
+
+        <div class="checkout-area-nav">
+            <button class="checkout-button">CHECKOUT</button>
+        </div>
+      </div>
+    </content>
+    <footer>
+      <div class="content">
+        <div class="FAQ">
+          <h1 class="headline-footer">FAQ</h1>
+          <ul class="ul-footer">
+            <li class="li-footer">What countries do you ship to?</li>
+            <li class="li-footer">Another question</li>
+          </ul>
+        </div>
+        <div>
+          <h1 class="headline-footer">Payment methods</h1>
+          <div class="payments">
+            <div class="icon">
+              <img
+                src="../../images/apple-pay.png"
+                alt="Apple pay"
+                class="img-footer"
+              />
+            </div>
+            <div class="icon">
+              <img
+                src="../../images/visa (1).png"
+                alt="Visa"
+                class="img-footer"
+              />
+            </div>
+            <div class="icon">
+              <img src="../../images/amex.png" alt="Amex" class="img-footer" />
+            </div>
+            <div class="icon">
+              <img
+                src="../../images/paypal-logo.png"
+                alt="Paypal"
+                class="img-footer"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="Company">
+          <h1 class="headline-footer">Omnia</h1>
+          <ul class="ul-footer">
+            <li class="li-footer">About us</li>
+            <li class="li-footer">Company policy</li>
+            <li class="li-footer">Terms & Conditions</li>
+            <li class="li-footer">Support</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

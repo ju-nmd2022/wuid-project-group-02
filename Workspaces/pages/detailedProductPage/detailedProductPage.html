@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="detailedProductPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
+    <script src="navigation.js" defer></script>
+    <script src="detailedproductpage.js" defer></script>
+    <title>detailedProductPage</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-text">All tops 10% off!</div>
+      <div class="header-text">All jeans 15% off!</div>
+      <div class="header-text">All imposter 100% sus!</div>
+    </header>
+    <nav>
+      <!-- menu button -->
+      <div class="menu-area">
+        <button class="btn-menu-icon searchbar-button" onclick="showCategory()">
+          <img src="../../images/menu_icon.png" class="menu-icon icon" />
+        </button>
+      </div>
+      <!-- logo -->
+      <div class="logo-area">
+        <img src="../../images/omnia.png" class="logo" />
+      </div>
+      <!-- list -->
+      <ul class="list-area">
+        <!-- searchbar -->
+        <li>
+          <img src="../../images/search.png" class="search_icon icon" />
+        </li>
+        <li class="searchbox">
+          <input
+            class="searchbar"
+            type="text"
+            placeholder="quirky search text"
+          />
+        </li>
+        <!-- profile button -->
+        <li class="profile">
+          <button class="btn-profile-icon searchbar-button">
+            <img src="../../images/smile_icon4.png" class="profile_icon icon" />
+          </button>
+        </li>
+        <!-- heart button -->
+        <li>
+          <button class="btn-heart-icon searchbar-button">
+            <img src="../../images/heart.png" class="heart-icon icon" />
+          </button>
+        </li>
+        <!-- cart button -->
+        <li>
+          <button class="btn-cart-icon searchbar-button" onclick="showCart()">
+            <img src="../../images/bag.png" class="cart-icon icon" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <content>
+      <!-- item flexbox -->
+      <div class="item-container">
+        <!-- item image -->
+        <img
+          src="../../images/checkoutdress.jpg"
+          alt="Product display"
+          class="productimage"
+        />
+
+        <!-- item textbox with details -->
+        <div class="item-textbox">
+          <div class="item-name">
+            <h2 class="h2-header">AQUADORA</h2>
+          </div>
+
+          <div class="item-description">
+            <h3 class="h3-header">lorem ipsum fheiuhgeihhiohwio ghwhfdoishfiosdjfiodjfisf</h3>
+          </div>
+
+          <div class="item-price">
+            <p class="sizes-text">52,99 €<img src="../../images/heart.png" class="heart-detailed" /></p>
+          </div>
+
+          <div class="sizes-title">
+            <p class="sizes-text">Size<img src="../../images/arrow-down.png" class="arrow-down-detailed" /></p>
+            <div class="sizes-dropdown">
+              <p class="sizes-text">x-small</p>
+              <p class="sizes-text">small</p>
+              <p class="sizes-text">medium</p>
+              <p class="sizes-text">large</p>
+              <p class="sizes-text">x-large</p>
+            </div>
+          </div>
+
+          <div class="material-title">
+            <p class="sizes-text">Material and Care<img src="../../images/arrow-down.png" class="arrow-down-detailed"></p>
+            <div class="material-dropdown">
+              <p class="sizes-text">90% cotton</br></br>machine wash at maximum 40ºC</br></br>do not tumble dry </p>
+            </div>
+          </div>
+          <p id="vertical-item-name">AQUADORA</p>
+
+          <!-- checkout button -->
+          <div class="checkout-area-detailed">
+            <button class="checkout-button-detailed">ADD TO CART</button>
+          </div>
+
+        </div>
+      </div>
+      
+    </content>
+    <footer>
+      <div class="content">
+        <div class="FAQ">
+          <h1 class="headline-footer">FAQ</h1>
+          <ul class="ul-footer">
+            <li class="li-footer">What countries do you ship to?</li>
+            <li class="li-footer">Another question</li>
+          </ul>
+        </div>
+        <div>
+          <h1 class="headline-footer">Payment methods</h1>
+          <div class="payments">
+            <div class="icon">
+              <img
+                src="../../images/apple-pay.png"
+                alt="Apple pay"
+                class="img-footer"
+              />
+            </div>
+            <div class="icon">
+              <img
+                src="../../images/visa (1).png"
+                alt="Visa"
+                class="img-footer"
+              />
+            </div>
+            <div class="icon">
+              <img src="../../images/amex.png" alt="Amex" class="img-footer" />
+            </div>
+            <div class="icon">
+              <img
+                src="../../images/paypal-logo.png"
+                alt="Paypal"
+                class="img-footer"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="Company">
+          <h1 class="headline-footer">Omnia</h1>
+          <ul class="ul-footer">
+            <li class="li-footer">About us</li>
+            <li class="li-footer">Company policy</li>
+            <li class="li-footer">Terms & Conditions</li>
+            <li class="li-footer">Support</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
