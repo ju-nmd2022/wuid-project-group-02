@@ -180,8 +180,8 @@
 }
 
 .cross {
-    width: 5%;
-    height: 5%;
+    width: 30px;
+    height: 30px;
 }
 .cross:hover {
     cursor: pointer;
@@ -366,8 +366,8 @@ footer {
     .cart-slideIn {
         display: none;
     }
-    content {
-        scale: 0.8;
+    .header-text3{
+      display: none;
     }
 }
 
@@ -377,8 +377,35 @@ footer {
   }
 }
 
-@media screen and (max-width: 700px){
-  .header-text3{
+@media screen and (max-width: 500px){
+  .searchbox{
     display: none;
+  }
+  .icon {
+    scale: 0.8;
+  }
+  .menu-area {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    width: 50px;
+  }
+  .logo {
+    scale: 0.8;
+  }
+  .list-area {
+    padding: 0rem 0.2rem 0 0.2rem;
+  }
+   body, nav, header, content {
+    width: 390px;
+  }
+  html {
+    margin: 0;
+  }
+  footer {
+    display: none;
+  }
+  .contianer-com-checkout {
+    width: 390px;
+    scale: 0.8
   }
 }

@@ -711,3 +711,43 @@ footer {
     display: none;
   }
 }
+@media screen and (max-width: 500px){
+  .searchbox{
+    display: none;
+  }
+  .icon {
+    scale: 0.8;
+  }
+  .menu-area {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    width: 100px;
+  }
+  .logo {
+    scale: 0.8;
+  }
+  .list-area {
+    padding: 0rem 0.2rem 0 0.2rem;
+  }
+   body, nav, header, content {
+    width: 390px;
+  }
+  html {
+    margin: 0;
+  }
+  .cart-slideIn , footer, .image-field, .checkout-image, .divider, .divider-field{
+    display: none;
+
+  }
+  content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "checkoutfield"
+  "cartfield";
+  height: 88vh;
+  margin-top: 2rem;
+  scale: 1.1;
+  }
+}

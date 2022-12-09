@@ -352,6 +352,9 @@ footer {
   .searchbox{
     display: none;
   }
+  .header-text3 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1000px){
@@ -360,8 +363,38 @@ footer {
   }
 }
 
-@media screen and (max-width: 700px){
-  .header-text3{
+@media screen and (max-width: 390px){
+  .searchbox{
     display: none;
+  }
+  .icon {
+    scale: 0.8;
+  }
+  .menu-area {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .logo {
+    scale: 0.8;
+  }
+  .list-area {
+    padding: 0rem 0.5rem 0 0.5rem;
+  }
+  .cart-slideIn {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  html {
+    width: 390px;
+    overflow-x: none;
+  }
+
+  .category-slideIn {
+    display: none;
+  }
+  .landingpage-text {
+    scale: 0.5;
   }
 }
