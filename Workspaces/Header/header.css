@@ -35,3 +35,15 @@ footer {
   grid-area: footer;
   background-color: rgb(0, 193, 0);
 }
+
+@media screen and (max-width: 1000px){
+  .header-text2{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .header-text3{
+    display: none;
+  }
+}
