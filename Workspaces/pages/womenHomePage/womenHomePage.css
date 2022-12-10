@@ -195,10 +195,9 @@ body {
 }
 
 .tops:hover, .bottoms:hover, .dresses:hover, .shoes:hover, .accessories:hover {
-  cursor: default;
-  transform: rotate(-90deg);
-  transform-origin: 1rem;
-  transition: all 0.5s ease-in-out 0s;
+  cursor: pointer;
+  border-bottom: #ffffff 2.5px solid;
+  transition: all .2s ease-in-out 0s;
 }
 .landingpageimg {
   object-fit: cover;
