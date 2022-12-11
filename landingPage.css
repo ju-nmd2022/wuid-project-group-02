@@ -179,13 +179,13 @@ content {
 }
 .landingpage-women-side {
   grid-area: womenimage;
-  background-image: url("../images/female_fashion.jpg");
+  background-image: url("female_fashion.jpg");
   background-size: cover;
   height: 88vh;
 }
 .landingpage-men-side {
   grid-area: menimage;
-  background-image: url("../images/men_fashion.jpg");
+  background-image: url("men_fashion.jpg");
   background-size: cover;
   height: 88vh;
   
