@@ -582,18 +582,35 @@ footer {
   #category-slideIn {
     z-index: 1;
   }
-}
 
-@media screen and (max-width: 400px) {
   .item-container {
     flex-direction: column;
   }
-}
 
-@media screen and (max-width: 400px) {
   .item-textbox {
     margin-top: 0;
     margin-bottom: 0;
+    height: 5%;
+  }
+
+  .checkout-button-detailed {
+    margin: 60px 0px 0px 100px;
+  }
+
+  .productimage {
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35px 80px 115vh;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content";
   }
 }
 
