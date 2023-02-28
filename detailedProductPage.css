@@ -679,3 +679,10 @@ footer {
     width: 0.1rem;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .checkout-area-detailed,
+  .checkout-button-detailed {
+    margin-left: 0rem;
+  }
+}
