@@ -675,6 +675,7 @@ footer {
   .image-field,
   .checkout-image {
     display: none;
+    -webkit-image-set: 1x;
   }
   content {
     display: grid;
